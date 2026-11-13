@@ -1,0 +1,21 @@
+codEmprestimo,associado,categoria,data_emprestimo,status
+3,Carlos,Funcionário,2007-05-28,Devolvido
+4,Marcos,"Professor Teste",2005-04-17,Devolvido
+6,Marcos,"Professor Teste",2008-06-20,Devolvido
+9,Vania,Funcionário,2009-01-20,Devolvido
+10,Roberto,Aluno,2008-04-04,Devolvido
+11,Marcia,Aluno,2010-03-06,Devolvido
+12,Ana,Aluno,2011-04-01,Pendente
+13,Marcio,Visitante,2012-03-08,Devolvido
+NULL,Edson,"Professor Teste",NULL,Pendente
+5,Analia,"Professor Teste",2003-05-18,Devolvido
+7,Analia,"Professor Teste",2009-04-05,Devolvido
+8,Analia,"Professor Teste",2010-03-07,Pendente
+1,Marta,Aluno,2003-03-15,Devolvido
+2,Marta,Aluno,2008-06-10,Devolvido
+14,Mauricio,Visitante,2012-03-08,Pendente
+NULL,Marcos,Funcionário,NULL,Pendente
+NULL,Edivaldo,Aluno,NULL,Pendente
+NULL,Leandro,Visitante,NULL,Pendente
+NULL,Jorge,Aluno,NULL,Pendente
+NULL,raldnei,Funcionário,NULL,Pendente

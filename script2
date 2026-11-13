@@ -1,0 +1,9 @@
+// Altera o texto do H1 assim que a página carrega
+const titulo = document.getElementById('titulo');
+titulo.textContent = 'Olá, Mundo!';
+
+// Adiciona interatividade ao botão
+const botao = document.getElementById('botao');
+botao.addEventListener('click', () => {
+  alert('Você clicou no botão do Olá, Mundo!');
+});

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor e Verde - Painel de Relatórios</title>
+    <!-- Bibliotecas de suporte para CSV, Gráficos e PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #f7f9f6;
+            padding: 20px;
+        }
+
+        .relatorio-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e0e0;
+        }
+
+        .relatorio-container h2 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .relatorio-container p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .upload-area {
+            margin-bottom: 25px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-acao {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #2e7d32;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-acao:hover {
+            background: #1b5e20;
+        }
+
+        .btn-pdf {
+            background: #d32f2f;
+        }
+
+        .btn-pdf:hover {
+            background: #b71c1c;
+        }
+
+        .voltar-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .voltar-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="relatorio-container">
+        <a href="index.html" class="voltar-link">← Voltar para a Loja</a>
+        <h2>📊 Painel de Gestão e Relatórios</h2>
+        <p>Selecione um arquivo CSV exportado do banco de dados (ex: <i>categoria_Emprestimos.csv</i>) para visualizar
+            gráficos e gerar o PDF.</p>
+
+        <div class="upload-area">
+            <input type="file" id="csvFile" accept=".csv">
+            <button onclick="processarCSV()" class="btn-acao">Processar CSV</button>
+            <button onclick="gerarPDF()" id="btnPdf" class="btn-acao btn-pdf" style="display:none;">Gerar PDF</button>
+        </div>
+
+        <div class="charts-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+            <div>
+                <canvas id="chartProdutos"></canvas>
+            </div>
+            <div>
+                <canvas id="chartClientes"></canvas>
+            </div>
+        </div>
+
+        <div id="lista" style="margin-top: 30px;"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

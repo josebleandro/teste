@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor e Verde - Venda de Mudas e Móveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Menu de Opções / Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🌿 Sabor & Verde</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#catalogo">Nossos Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <!-- Nova opção abrindo a página de relatórios separada -->
+                <li><a href="relatorios.html">📊 Relatórios (CSV)</a></li>
+                
+                <li class="carrinho-container">
+                    🛒 Carrinho: <span id="contador-carrinho">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <main id="home">
+        <section class="hero">
+            <h1>Cultive a Natureza e Decore sua Casa</h1>
+            <p>Escolha as melhores mudas de plantas e móveis de madeira rústicos.</p>
+        </section>
+
+        <!-- Vitrine de Produtos (Plantas e Móveis) -->
+        <section id="catalogo" class="vitrine">
+            <h2>Nossos Produtos</h2>
+            <div class="produtos-container">
+
+                <!-- Produto 1: Planta -->
+                <div class="card-produto">
+                    <div class="foto-container">
+                        <!-- Exemplo usando pasta local: coloque a imagem em static/img/jabuticaba.jpg -->
+                        <img src="img/jabuticaba.jpg" alt="Muda de Jabuticaba" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="foto-placeholder" style="display:none;">🌱</div>
+                    </div>
+                    <h3>Muda de Jabuticaba</h3>
+                    <p class="preco">R$ 45,00</p>
+                    <button class="btn-comprar" data-nome="Muda de Jabuticaba" data-preco="45.00">Adicionar ao Carrinho</button>
+                </div>
+
+                <!-- Produto 2: Planta -->
+                <div class="card-produto">
+                    <div class="foto-container">
+                        <img src="img/manjericao.jpg" alt="Muda de Manjericão" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="foto-placeholder" style="display:none;">🌿</div>
+                    </div>
+                    <h3>Muda de Manjericão</h3>
+                    <p class="preco">R$ 12,00</p>
+                    <button class="btn-comprar" data-nome="Muda de Manjericão" data-preco="12.00">Adicionar ao Carrinho</button>
+                </div>
+
+                <!-- Produto 3: Planta -->
+                <div class="card-produto">
+                    <div class="foto-container">
+                        <img src="img/cacto.jpg" alt="Cacto Suculento" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="foto-placeholder" style="display:none;">🌵</div>
+                    </div>
+                    <h3>Cacto Suculento</h3>
+                    <p class="preco">R$ 15,00</p>
+                    <button class="btn-comprar" data-nome="Cacto Suculento" data-preco="15.00">Adicionar ao Carrinho</button>
+                </div>
+
+                <!-- Produto 4: Móvel de Madeira (Novo) -->
+                <div class="card-produto">
+                    <div class="foto-container">
+                        <img src="img/casa_passaro.jpg" alt="Casa de Pássaro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="foto-placeholder" style="display:none;">🏡</div>
+                    </div>
+                    <h3>Casa de Pássaro</h3>
+                    <p class="preco">R$ 35,00</p>
+                    <button class="btn-comprar" data-nome="Casa de Pássaro" data-preco="35.00">Adicionar ao Carrinho</button>
+                </div>
+
+                <!-- Produto 5: Móvel de Madeira (Novo) -->
+                <div class="card-produto">
+                    <div class="foto-container">
+                        <img src="img/cadeira_madeira.jpg" alt="Cadeira de Madeira" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="foto-placeholder" style="display:none;">🪑</div>
+                    </div>
+                    <h3>Cadeira de Madeira</h3>
+                    <p class="preco">R$ 80,00</p>
+                    <button class="btn-comprar" data-nome="Cadeira de Madeira" data-preco="80.00">Adicionar ao Carrinho</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção: Resumo do Carrinho, Lista e Total -->
+        <section id="carrinho-secao" class="carrinho-detalhes">
+            <h2>Seu Pedido</h2>
+            <ul id="lista-carrinho" class="lista-vazia">
+                <li id="item-vazio">Nenhum produto adicionado ainda.</li>
+            </ul>
+
+            <div id="total-container" class="total-pedido">
+                <span>Total da Compra:</span>
+                <span id="valor-total">R$ 0,00</span>
+            </div>
+
+            <!-- Container dos botões de ação -->
+            <div class="botoes-acoes">
+                <button id="btn-limpar" class="btn-secundario">Limpar Tudo</button>
+                <button id="btn-finalizar" class="btn-primario">🚀 Finalizar no WhatsApp</button>
+            </div>
+        </section>
+
+    </main>
+<!-- Rodapé com Contatos e Redes Sociais -->
+    <footer id="contato" class="site-footer">
+        <div class="footer-content">
+            <h3>🌿 Sabor & Verde</h3>
+            <p>Cultivando natureza e bem-estar para a sua casa.</p>
+            
+            <div class="redes-sociais">
+                <!-- Link direto para o Instagram -->
+                <a href="https://instagram.com/seu_usuario" target="_blank" class="btn-social instagram">
+                    📷 Instagram (@seu_usuario)
+                </a>
+                
+                <!-- Link direto para o WhatsApp -->
+                <a href="https://wa.me/5514981791779?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="btn-social whatsapp">
+                    💬 WhatsApp: (14) 98179-1779
+                </a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 Sabor & Verde - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

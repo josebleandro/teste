@@ -1,0 +1,9 @@
+codigo_pedido,nome_cliente,email_cliente,data_hora_pedido,nome_produto,categoria_produto,quantidade,preco_unitario,subtotal_item,valor_total_pedido
+1,"Ana Souza",ana.souza@email.com,"06/11/2026 13:38",Cacto,Plantas,1,15.00,15.00,105.00
+1,"Ana Souza",ana.souza@email.com,"06/11/2026 13:38",Jabuticaba,Plantas,2,45.00,90.00,105.00
+2,"Carlos Silva",carlos.silva@email.com,"06/11/2026 13:39","Casa de Pássaro",Móveis,1,35.00,35.00,151.00
+2,"Carlos Silva",carlos.silva@email.com,"06/11/2026 13:39","Cadeira de Varanda",Móveis,1,80.00,80.00,151.00
+2,"Carlos Silva",carlos.silva@email.com,"06/11/2026 13:39","Casa de Pássaro",Móveis,1,35.00,35.00,151.00
+2,"Carlos Silva",carlos.silva@email.com,"06/11/2026 13:39",Manjericão,Plantas,3,12.00,36.00,151.00
+2,"Carlos Silva",carlos.silva@email.com,"06/11/2026 13:39","Cadeira de Varanda",Móveis,1,80.00,80.00,151.00
+2,"Carlos Silva",carlos.silva@email.com,"06/11/2026 13:39",Manjericão,Plantas,3,12.00,36.00,151.00
